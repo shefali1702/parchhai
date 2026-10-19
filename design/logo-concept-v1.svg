@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F2B84B" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#E8743B" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#0E0B14" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFE3A3"/>
+      <stop offset="60%" stop-color="#F2B84B"/>
+      <stop offset="100%" stop-color="#E8743B"/>
+    </linearGradient>
+    <linearGradient id="shadow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8E7CD6" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#6B5CA5" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="flame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFF4D6"/>
+      <stop offset="55%" stop-color="#F2B84B"/>
+      <stop offset="100%" stop-color="#E8743B"/>
+    </linearGradient>
+    <mask id="eclipse">
+      <rect width="800" height="520" fill="black"/>
+      <circle cx="400" cy="200" r="118" fill="white"/>
+      <circle cx="432" cy="186" r="112" fill="black"/>
+    </mask>
+  </defs>
+
+  <rect width="800" height="520" fill="#0E0B14"/>
+  <circle cx="400" cy="200" r="190" fill="url(#glow)"/>
+
+  <!-- eclipse crescent: light partly swallowed by shadow -->
+  <circle cx="400" cy="200" r="118" fill="url(#gold)" mask="url(#eclipse)" opacity="0.9"/>
+
+  <!-- voice: waveform rising from the horizon -->
+  <g fill="url(#gold)">
+    <rect x="334" y="182" width="12" height="18" rx="6"/>
+    <rect x="354" y="160" width="12" height="40" rx="6"/>
+    <rect x="374" y="130" width="12" height="70" rx="6"/>
+    <rect x="394" y="106" width="12" height="94" rx="6"/>
+    <rect x="414" y="138" width="12" height="62" rx="6"/>
+    <rect x="434" y="164" width="12" height="36" rx="6"/>
+    <rect x="454" y="186" width="12" height="14" rx="6"/>
+  </g>
+  <!-- diya flame above the tallest note: the memory still burning -->
+  <path d="M400 62 C 412 78, 414 90, 400 100 C 386 90, 388 78, 400 62 Z" fill="url(#flame)"/>
+
+  <!-- horizon -->
+  <line x1="300" y1="203" x2="500" y2="203" stroke="#F2B84B" stroke-opacity="0.5" stroke-width="1.5"/>
+
+  <!-- the parchhai: the voice's shadow, fading below -->
+  <g fill="url(#shadow)">
+    <rect x="334" y="206" width="12" height="18" rx="6"/>
+    <rect x="354" y="206" width="12" height="40" rx="6"/>
+    <rect x="374" y="206" width="12" height="70" rx="6"/>
+    <rect x="394" y="206" width="12" height="94" rx="6"/>
+    <rect x="414" y="206" width="12" height="62" rx="6"/>
+    <rect x="434" y="206" width="12" height="36" rx="6"/>
+    <rect x="454" y="206" width="12" height="14" rx="6"/>
+  </g>
+
+  <text x="400" y="392" text-anchor="middle" font-family="Cormorant Garamond, Georgia, 'Times New Roman', serif"
+        font-size="64" letter-spacing="14" fill="#F5EDE0">PARCHHAI</text>
+  <text x="400" y="438" text-anchor="middle" font-family="'Noto Serif Devanagari', 'Noto Sans Devanagari', serif"
+        font-size="30" fill="#F2B84B">परछाईं</text>
+  <text x="400" y="482" text-anchor="middle" font-family="Georgia, serif" font-style="italic"
+        font-size="18" fill="#B9AFCF">Kuch log jaate nahi, parchhai ban jaate hain.</text>
+</svg>
