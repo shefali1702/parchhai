@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en" data-title="st.title">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Begin · Parchhai</title>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&family=Tiro+Gurmukhi&family=Tiro+Tamil&family=Noto+Sans+Devanagari:wght@400;500;600&family=Noto+Sans+Gurmukhi:wght@400;500;600&family=Noto+Sans+Tamil:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/app.css">
+<style>
+  .onboard { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); min-height: calc(100svh - 64px); }
+  /* the dawn panel: the sun climbs as each step is completed */
+  .scene { position: relative; overflow: hidden; isolation: isolate; padding: clamp(40px, 7vw, 96px) var(--gutter); display: flex; flex-direction: column; justify-content: flex-start; }
+  .scene .sky { position: absolute; inset: 0; z-index: -3; background: var(--dawn); }
+  .scene .sun { position: absolute; z-index: -2; left: 68%; width: clamp(120px, 14vw, 200px); aspect-ratio: 1; border-radius: 50%;
+    bottom: calc(var(--rise, 0) * 1% - 6%); translate: -50% 0; transition: bottom 1.8s cubic-bezier(.2, .7, .2, 1);
+    background: radial-gradient(circle at 50% 42%, #fffaf0, #ffe6b5 40%, #ffc27e 72%, #ff9b63);
+    box-shadow: 0 0 70px 24px rgba(255, 200, 130, .5), 0 0 240px 110px rgba(255, 140, 90, .32); }
+  .scene svg.land { position: absolute; left: 0; bottom: 0; width: 100%; height: 34%; z-index: -1; }
+  .scene h1 { font-family: var(--display); font-weight: 400; font-size: clamp(40px, 5.4vw, 84px); line-height: 1.02; color: #FFF6EA; max-width: 13ch;
+    text-shadow: 0 6px 40px rgba(40, 10, 50, .35); margin-top: 16px; }
+  html:not([lang="en"]) .scene h1 { line-height: 1.28; font-size: clamp(34px, 4.4vw, 66px); }
+  .scene h1 em { font-style: italic; background: linear-gradient(180deg, #FFF0D2, #FFC27E 55%, #FF8F5E); -webkit-background-clip: text; background-clip: text; color: transparent; padding-right: .08em; }
+  .scene p { color: rgba(255, 240, 226, .88); margin-top: 16px; max-width: 40ch; font-size: clamp(16px, 1.3vw, 18px); }
+  .scene .swap { transition: opacity .4s, filter .4s, transform .4s; }
+  .scene .swap.out { opacity: 0; filter: blur(8px); transform: translateY(10px); }
+
+  .panel { padding: clamp(28px, 5vw, 72px) var(--gutter); display: flex; flex-direction: column; justify-content: center; }
+  .steps { display: flex; gap: 8px; margin-bottom: 28px; }
+  .steps i { flex: 1; height: 4px; border-radius: 4px; background: var(--line); overflow: hidden; position: relative; }
+  .steps i::after { content: ""; position: absolute; inset: 0; transform: scaleX(0); transform-origin: left; background: linear-gradient(90deg, var(--saffron), var(--rose));
+    transition: transform .8s cubic-bezier(.2, .7, .2, 1); }
+  .steps i.on::after { transform: none; }
+  .step { display: none; }
+  .step.on { display: block; animation: stepin .7s cubic-bezier(.2, .7, .2, 1); }
+  @keyframes stepin { from { opacity: 0; transform: translateX(24px); filter: blur(6px); } }
+  .step h2 { font-size: clamp(30px, 3.2vw, 44px); }
+  .step .stack { margin-top: 24px; }
+  .actions { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 30px; flex-wrap: wrap; }
+  .tabs { display: inline-flex; padding: 4px; border-radius: 999px; border: 1px solid var(--line); margin-bottom: 26px; }
+  .tabs button { padding: 9px 18px; border-radius: 999px; font-size: 14px; color: var(--ink-2); }
+  .tabs button[aria-selected="true"] { background: var(--ink); color: var(--bg); }
+
+  .photo { display: flex; align-items: center; gap: 18px; }
+  .photo label { cursor: pointer; }
+  .photo .ring { width: 96px; height: 96px; border-radius: 50%; display: grid; place-items: center; overflow: hidden; color: var(--ink-3);
+    border: 1.5px dashed var(--line-2); background: var(--surface); transition: border-color .3s, transform .3s; }
+  .photo label:hover .ring, .photo.drag .ring { border-color: var(--peach); transform: scale(1.03); }
+  .photo .ring img { width: 100%; height: 100%; object-fit: cover; }
+  .photo .ring svg { width: 28px; height: 28px; }
+
+  .lang-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .lang-card { position: relative; display: flex; flex-direction: column; gap: 6px; padding: 22px; border-radius: 22px; border: 1px solid var(--line-2);
+    background: var(--surface); text-align: left; transition: transform .3s, border-color .3s, background .3s; overflow: hidden; }
+  .lang-card:hover { transform: translateY(-2px); border-color: rgba(255, 201, 148, .45); }
+  .lang-card .glyph { font-family: var(--display); font-size: 56px; line-height: 1; color: var(--peach); }
+  .lang-card b { font-family: var(--display); font-weight: 400; font-size: 24px; }
+  .lang-card[aria-checked="true"] { border-color: var(--peach); background: linear-gradient(160deg, rgba(255, 201, 148, .16), rgba(232, 118, 138, .08)); }
+  .lang-card[aria-checked="true"]::after { content: "✓"; position: absolute; top: 14px; right: 16px; width: 26px; height: 26px; border-radius: 50%;
+    display: grid; place-items: center; background: var(--peach); color: #2a1306; font-weight: 700; font-size: 14px; }
+
+  .consent { padding: 22px; border-radius: 20px; border: 1px solid var(--line); background: var(--surface); }
+  .consent p + p { margin-top: 10px; }
+  .done { text-align: center; }
+  .done .avatar { margin: 0 auto; animation: breathe 5s ease-in-out infinite; }
+  .done h2 { margin-top: 24px; }
+  .done .row { justify-content: center; margin-top: 28px; }
+
+  @media (max-width: 900px) {
+    .onboard { grid-template-columns: 1fr; }
+    .scene { min-height: 300px; padding-bottom: 120px; }
+    .scene .sun { width: 110px; }
+  }
+</style>
+</head>
+<body data-page="start">
+<main class="onboard">
+  <section class="scene" aria-live="polite">
+    <div class="sky" aria-hidden="true"></div>
+    <div class="sun" aria-hidden="true"></div>
+    <svg class="land" viewBox="0 0 800 260" preserveAspectRatio="none" aria-hidden="true">
+      <path fill="#9a4d6e" opacity=".75" d="M0 90 C 110 50, 220 60, 330 80 S 560 40, 800 70 L800 260 L0 260Z"/>
+      <path fill="#5e2a57" d="M0 140 C 150 110, 280 116, 420 134 S 650 110, 800 126 L800 260 L0 260Z"/>
+      <path fill="#2b1330" d="M0 200 C 200 180, 420 190, 600 198 S 760 188, 800 192 L800 260 L0 260Z"/>
+    </svg>
+    <span class="kicker swap" id="scene-k"></span>
+    <h1 class="swap" id="scene-t"></h1>
+    <p class="swap" id="scene-p"></p>
+  </section>
+
+  <section class="panel">
+    <div class="steps" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+
+    <!-- 0: you -->
+    <div class="step" data-step="0">
+      <div class="tabs" role="tablist">
+        <button role="tab" aria-selected="true" data-tab="new" data-i18n="st.tabNew"></button>
+        <button role="tab" aria-selected="false" data-tab="back" data-i18n="st.tabBack"></button>
+      </div>
+      <div data-pane="new">
+        <h2 data-i18n="st.s0t"></h2>
+        <div class="stack">
+          <label class="field"><span data-i18n="st.yourName"></span><input class="input" id="f-you" autocomplete="name" data-i18n-ph="st.yourNamePh"></label>
+          <label class="field"><span data-i18n="st.email"></span><input class="input" id="f-email" type="email" autocomplete="email" placeholder="you@example.com"></label>
+          <div class="field"><span data-i18n="st.iam"></span><div class="chips" id="f-role"></div></div>
+        </div>
+      </div>
+      <div data-pane="back" hidden>
+        <h2 data-i18n="st.backT"></h2>
+        <p class="muted" style="margin-top:14px" id="back-msg"></p>
+        <div class="row" style="margin-top:24px" id="back-actions"></div>
+      </div>
+    </div>
+
+    <!-- 1: the elder -->
+    <div class="step" data-step="1">
+      <h2 data-i18n="st.s1t"></h2>
+      <div class="stack">
+        <div class="photo" id="photo">
+          <label><input type="file" accept="image/*" id="f-photo" class="sr-only"><span class="ring" id="photo-ring"></span></label>
+          <div><div class="label" data-i18n="st.photo"></div><div class="faint small" data-i18n="st.photoHint"></div></div>
+        </div>
+        <label class="field"><span data-i18n="st.elderName"></span><input class="input" id="f-name" data-i18n-ph="st.elderNamePh"></label>
+        <div class="field"><span data-i18n="st.callThem"></span><div class="chips" id="f-call"></div>
+          <input class="input" id="f-call-custom" data-i18n-ph="st.callCustom" style="margin-top:6px"></div>
+        <div class="grid-2">
+          <label class="field"><span data-i18n="st.born"></span><input class="input" id="f-born" type="number" inputmode="numeric" min="1900" max="2010" placeholder="1942"></label>
+          <label class="field"><span data-i18n="st.hometown"></span><input class="input" id="f-town" data-i18n-ph="st.hometownPh"></label>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2: their language -->
+    <div class="step" data-step="2">
+      <h2 data-i18n="st.s2t"></h2>
+      <p class="muted" style="margin-top:10px" data-i18n="st.s2p"></p>
+      <div class="stack">
+        <div class="lang-grid" role="radiogroup" id="f-lang"></div>
+        <label class="field"><span data-i18n="st.dialect"></span><input class="input" id="f-dialect" data-i18n-ph="st.dialectPh"></label>
+      </div>
+    </div>
+
+    <!-- 3: consent -->
+    <div class="step" data-step="3">
+      <h2 data-i18n="st.s3t"></h2>
+      <div class="stack">
+        <div class="consent muted"><p id="consent-a"></p><p data-i18n="st.consentB"></p></div>
+        <label class="check"><input type="checkbox" id="c1"><span id="c1-l"></span></label>
+        <label class="check"><input type="checkbox" id="c2"><span data-i18n="st.c2"></span></label>
+      </div>
+    </div>
+
+    <!-- done -->
+    <div class="step done" data-step="4">
+      <div id="done-avatar"></div>
+      <h2 id="done-t"></h2>
+      <p class="muted" style="margin-top:12px" data-i18n="st.doneP"></p>
+      <div class="row">
+        <a class="btn btn-primary btn-lg" href="record.html"><span data-i18n="st.firstInterview"></span><span data-icon="arrow"></span></a>
+        <a class="btn btn-ghost btn-lg" href="vault.html" data-i18n="st.openVault"></a>
+      </div>
+    </div>
+
+    <div class="actions" id="actions">
+      <button class="btn btn-quiet" id="prev"><span data-icon="back"></span><span data-i18n="c.back"></span></button>
+      <button class="btn btn-primary" id="next"><span id="next-l" data-i18n="c.next"></span><span data-icon="arrow"></span></button>
+    </div>
+  </section>
+</main>
+
+<script src="assets/js/core.js"></script>
+<script src="assets/js/db.js"></script>
+<script src="assets/js/pages/start.js"></script>
+</body>
+</html>
