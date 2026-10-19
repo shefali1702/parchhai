@@ -7,6 +7,6 @@
    Never put the service_role key here.
    ========================================================= */
 window.PARCHHAI_CONFIG = {
-  supabaseUrl: "",
-  supabaseAnonKey: "",
+  supabaseUrl: "https://ghwajwxtdxvcoebzxrgz.supabase.co",
+  supabaseAnonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imdod2Fqd3h0ZHh2Y29lYnp4cmd6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI0MTI4MTcsImV4cCI6MjEwNzk4ODgxN30.csnjxvHyBtkCHfyOdInAIRrrsMwad6u-uMu0mk3fvZQ",
 };
