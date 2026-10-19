@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en" data-title="cp.title">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Time capsules · Parchhai</title>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&family=Tiro+Gurmukhi&family=Tiro+Tamil&family=Noto+Sans+Devanagari:wght@400;500;600&family=Noto+Sans+Gurmukhi:wght@400;500;600&family=Noto+Sans+Tamil:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/app.css">
+<style>
+  .layout { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: clamp(20px, 3vw, 36px); align-items: start; }
+  .compose h2 { font-size: clamp(28px, 3vw, 40px); }
+  .compose .stack { margin-top: 22px; }
+  .compose .btn-primary { width: 100%; margin-top: 8px; }
+  .stamp { position: absolute; inset: 0; display: grid; place-items: center; pointer-events: none; z-index: 5; }
+  .stamp svg { width: 150px; height: 150px; opacity: 0; transform: scale(2.4) rotate(-20deg); filter: drop-shadow(0 20px 30px rgba(0, 0, 0, .5)); }
+  .stamp.go svg { animation: stamp 1.6s cubic-bezier(.2, .9, .3, 1.2) forwards; }
+  @keyframes stamp { 0% { opacity: 0; transform: scale(2.4) rotate(-20deg); } 35% { opacity: 1; transform: scale(1) rotate(0); } 75% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(.6) translateY(80px); } }
+
+  .shelf { display: grid; gap: 18px; }
+  .shelf-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 4px; }
+  /* an envelope with its wax seal */
+  .env { position: relative; border-radius: 22px; padding: 26px 26px 22px; overflow: hidden; isolation: isolate; border: 1px solid rgba(255, 220, 190, .16);
+    background: linear-gradient(160deg, #3a1f3f 0%, #241329 60%, #1a0e1f 100%); box-shadow: 0 30px 70px -40px rgba(0, 0, 0, .9); }
+  .env::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 58%; z-index: -1;
+    background: linear-gradient(180deg, rgba(255, 220, 190, .09), rgba(255, 220, 190, .02)); clip-path: polygon(0 0, 100% 0, 50% 100%); }
+  .env::after { content: ""; position: absolute; inset: 0; z-index: -1; opacity: .5;
+    background: repeating-linear-gradient(115deg, rgba(255, 255, 255, .012) 0 2px, transparent 2px 7px); }
+  .env .seal { position: relative; display: block; width: 84px; height: 84px; margin: 0 auto; touch-action: none; user-select: none; -webkit-user-select: none; border-radius: 50%; }
+  .env .seal svg.wax { width: 100%; height: 100%; filter: drop-shadow(0 10px 14px rgba(0, 0, 0, .45)); transition: transform .3s; }
+  .env .seal svg.ring { position: absolute; inset: -8px; width: calc(100% + 16px); height: calc(100% + 16px); transform: rotate(-90deg); pointer-events: none; }
+  .env.locked .seal { cursor: not-allowed; }
+  .env.ready .seal { cursor: pointer; }
+  .env.ready .seal svg.wax { animation: glowpulse 2.4s ease-in-out infinite; }
+  @keyframes glowpulse { 50% { filter: drop-shadow(0 0 18px rgba(255, 120, 100, .7)); } }
+  .env.shake .seal { animation: shake .5s; }
+  @keyframes shake { 20%, 60% { transform: translateX(-6px); } 40%, 80% { transform: translateX(6px); } }
+  .env .to { text-align: center; margin-top: 18px; font-family: var(--display); font-size: clamp(24px, 2.4vw, 32px); line-height: 1.2; }
+  .env .when { text-align: center; color: var(--ink-3); font-size: 14px; margin-top: 6px; }
+  .env .bottom { display: flex; justify-content: space-between; align-items: center; margin-top: 18px; gap: 10px; }
+  .env .count { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: #FFDDB0; }
+  .env .count svg { width: 15px; height: 15px; }
+  .letter-sheet .paper { margin-top: 18px; padding: clamp(22px, 3vw, 34px); border-radius: 20px; color: #2b1a14;
+    background: linear-gradient(180deg, #fbf3e6, #f2e3cc); box-shadow: inset 0 0 60px rgba(160, 110, 60, .18); font-family: var(--display); font-size: 21px; line-height: 1.6; }
+  .letter-sheet .paper .sig { margin-top: 18px; text-align: right; font-style: italic; }
+  .letter-sheet .player { display: flex; align-items: center; gap: 12px; margin-top: 18px; }
+  .letter-sheet .player .wave i { background: rgba(43, 26, 20, .2); }
+  .letter-sheet .player .wave i.done { background: linear-gradient(180deg, #d9822f, #b85a22); }
+  @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body data-page="capsules">
+<main>
+  <header class="page-hero">
+    <div class="wrap">
+      <span class="kicker" data-i18n="cp.kicker"></span>
+      <h1 data-i18n="cp.h1"></h1>
+      <p class="lede" data-i18n="cp.lede"></p>
+    </div>
+  </header>
+
+  <section class="section overlap">
+    <div class="wrap layout" id="layout">
+      <form class="card glass compose" id="compose" novalidate>
+        <div class="stamp" id="stamp" aria-hidden="true"></div>
+        <h2 data-i18n="cp.new"></h2>
+        <div class="stack">
+          <label class="field"><span data-i18n="cp.from"></span><select class="select" id="f-elder"></select></label>
+          <label class="field"><span data-i18n="cp.to"></span><input class="input" id="f-to" data-i18n-ph="cp.toPh" required></label>
+          <div class="field"><span data-i18n="cp.occasion"></span><div class="chips" id="f-occ"></div></div>
+          <label class="field"><span data-i18n="cp.date"></span><input class="input" id="f-date" type="date" required></label>
+          <label class="field"><span data-i18n="cp.story"></span><select class="select" id="f-story"></select></label>
+          <label class="field"><span data-i18n="cp.note"></span><textarea class="textarea" id="f-note" data-i18n-ph="cp.notePh"></textarea></label>
+          <button class="btn btn-primary btn-lg" type="submit"><span data-icon="lock"></span><span data-i18n="cp.seal"></span></button>
+        </div>
+      </form>
+
+      <section class="shelf" aria-live="polite">
+        <div class="shelf-head"><span class="kicker" data-i18n="cp.shelf"></span><span class="faint small" id="shelf-n"></span></div>
+        <div class="shelf" id="shelf"></div>
+      </section>
+    </div>
+  </section>
+</main>
+
+<dialog class="sheet letter-sheet" id="sheet">
+  <button class="icon-btn sheet-close" id="sheet-close" data-i18n-aria="c.close"><span data-icon="close"></span></button>
+  <div class="sheet-body" id="sheet-body"></div>
+</dialog>
+
+<script src="assets/js/core.js"></script>
+<script src="assets/js/db.js"></script>
+<script src="assets/js/questions.js"></script>
+<script src="assets/js/player.js"></script>
+<script src="assets/js/pages/capsule.js"></script>
+</body>
+</html>
