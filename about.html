@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en" data-title="ab.title">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About · Parchhai</title>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&family=Tiro+Gurmukhi&family=Tiro+Tamil&family=Noto+Sans+Devanagari:wght@400;500;600&family=Noto+Sans+Gurmukhi:wght@400;500;600&family=Noto+Sans+Tamil:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/app.css">
+<style>
+  .mission { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: clamp(28px, 5vw, 80px); align-items: start; }
+  .mission .big { font-family: var(--display); font-size: clamp(28px, 3.4vw, 46px); line-height: 1.25; }
+  html:not([lang="en"]) .mission .big { line-height: 1.5; font-size: clamp(24px, 2.8vw, 38px); }
+  .mission .big em { font-style: italic; color: var(--peach); }
+  .mission p + p { margin-top: 16px; }
+  .promises { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 40px; }
+  .promise .ic { width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; color: var(--peach);
+    background: rgba(255, 201, 148, .08); border: 1px solid rgba(255, 201, 148, .22); }
+  .promise .ic svg { width: 24px; height: 24px; }
+  .promise h3 { margin-top: 20px; }
+  .promise p { margin-top: 10px; }
+
+  .vol { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(24px, 4vw, 56px); align-items: start; }
+  .timeline { list-style: none; margin-top: 30px; position: relative; }
+  .timeline::before { content: ""; position: absolute; left: 19px; top: 8px; bottom: 8px; width: 1px; background: linear-gradient(var(--peach), transparent); }
+  .timeline li { position: relative; padding: 0 0 26px 58px; }
+  .timeline li b { position: absolute; left: 0; top: 0; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center;
+    font-family: "Instrument Serif", Georgia, serif; font-weight: 400; font-size: 20px; color: #2a1306; background: linear-gradient(180deg, #FFDDB0, var(--saffron)); }
+  .timeline h3 { font-size: 24px; }
+  .timeline p { margin-top: 4px; }
+  .seg { display: inline-flex; padding: 4px; border-radius: 999px; border: 1px solid var(--line); margin-bottom: 22px; flex-wrap: wrap; }
+  .seg button { padding: 9px 18px; border-radius: 999px; font-size: 14px; color: var(--ink-2); }
+  .seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+  .langs-pick { display: flex; flex-wrap: wrap; gap: 8px; }
+  .thanks { text-align: center; padding: 30px 10px; }
+  .thanks .orb { width: 90px; height: 90px; }
+  .thanks h2 { margin-top: 22px; }
+
+  .faq { max-width: 860px; margin: 30px auto 0; }
+  .faq details { border-bottom: 1px solid var(--line); }
+  .faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 4px;
+    font-family: var(--display); font-size: clamp(21px, 2vw, 26px); line-height: 1.3; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; font-family: var(--body); font-size: 24px; color: var(--peach); transition: transform .3s; flex: none; }
+  .faq details[open] summary::after { transform: rotate(45deg); }
+  .faq details p { padding: 0 4px 22px; color: var(--ink-2); max-width: 70ch; }
+  .center { text-align: center; }
+  @media (max-width: 900px) { .mission, .vol { grid-template-columns: 1fr; } .promises { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body data-page="about">
+<main>
+  <header class="page-hero">
+    <div class="wrap">
+      <span class="kicker" data-i18n="ab.kicker"></span>
+      <h1 data-i18n="ab.h1"></h1>
+      <p class="lede" data-i18n="ab.lede"></p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap mission">
+      <p class="big reveal" data-i18n="ab.big"></p>
+      <div class="muted reveal" style="--d:.1s"><p data-i18n="ab.p1"></p><p data-i18n="ab.p2"></p><p data-i18n="ab.p3"></p></div>
+    </div>
+    <div class="wrap promises">
+      <article class="card lift promise reveal"><div class="ic"><span data-icon="shield"></span></div><h3 data-i18n="ab.pr1t"></h3><p class="muted" data-i18n="ab.pr1"></p></article>
+      <article class="card lift promise reveal" style="--d:.1s"><div class="ic"><span data-icon="heart"></span></div><h3 data-i18n="ab.pr2t"></h3><p class="muted" data-i18n="ab.pr2"></p></article>
+      <article class="card lift promise reveal" style="--d:.2s"><div class="ic"><span data-icon="elder"></span></div><h3 data-i18n="ab.pr3t"></h3><p class="muted" data-i18n="ab.pr3"></p></article>
+    </div>
+  </section>
+
+  <section class="section" id="volunteer">
+    <div class="wrap vol">
+      <div class="reveal">
+        <span class="kicker" data-i18n="ab.vk"></span>
+        <h2 style="margin-top:16px" data-i18n="ab.vt"></h2>
+        <p class="muted" style="margin-top:16px" data-i18n="ab.vp"></p>
+        <ol class="timeline">
+          <li><b>1</b><h3 data-i18n="ab.s1t"></h3><p class="muted" data-i18n="ab.s1"></p></li>
+          <li><b>2</b><h3 data-i18n="ab.s2t"></h3><p class="muted" data-i18n="ab.s2"></p></li>
+          <li><b>3</b><h3 data-i18n="ab.s3t"></h3><p class="muted" data-i18n="ab.s3"></p></li>
+          <li><b>4</b><h3 data-i18n="ab.s4t"></h3><p class="muted" data-i18n="ab.s4"></p></li>
+        </ol>
+      </div>
+      <div class="card glass reveal" style="--d:.1s" id="vol-card">
+        <form id="vol-form" novalidate>
+          <div class="seg" role="group" id="role">
+            <button type="button" aria-pressed="true" data-r="volunteer" data-i18n="ab.rVol"></button>
+            <button type="button" aria-pressed="false" data-r="home" data-i18n="ab.rHome"></button>
+          </div>
+          <div class="stack">
+            <label class="field"><span id="l-name" data-i18n="ab.name"></span><input class="input" id="v-name" autocomplete="name" required></label>
+            <div class="grid-2">
+              <label class="field"><span data-i18n="ab.email"></span><input class="input" id="v-email" type="email" autocomplete="email" required></label>
+              <label class="field"><span data-i18n="ab.phone"></span><input class="input" id="v-phone" type="tel" autocomplete="tel" inputmode="tel"></label>
+            </div>
+            <div class="grid-2">
+              <label class="field"><span data-i18n="ab.city"></span><input class="input" id="v-city" autocomplete="address-level2"></label>
+              <label class="field"><span id="l-org" data-i18n="ab.org"></span><input class="input" id="v-org"></label>
+            </div>
+            <div class="field"><span data-i18n="ab.speaks"></span><div class="langs-pick" id="v-langs"></div></div>
+            <div class="field" id="when-field"><span data-i18n="ab.when"></span><div class="chips" id="v-when"></div></div>
+            <label class="field"><span data-i18n="ab.msg"></span><textarea class="textarea" id="v-msg" style="min-height:90px"></textarea></label>
+            <label class="check"><input type="checkbox" id="v-ok"><span class="muted small" data-i18n="ab.ok"></span></label>
+            <button class="btn btn-primary btn-lg" type="submit" style="width:100%"><span data-i18n="ab.send"></span><span data-icon="arrow"></span></button>
+          </div>
+        </form>
+        <div class="thanks" id="thanks" hidden><div class="orb"></div><h2 data-i18n="ab.thxT"></h2><p class="muted" style="margin-top:12px" data-i18n="ab.thx"></p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap center"><span class="kicker" data-i18n="ab.fk"></span><h2 style="margin-top:16px" data-i18n="ab.ft"></h2></div>
+    <div class="faq" id="faq"></div>
+  </section>
+</main>
+
+<script src="assets/js/core.js"></script>
+<script src="assets/js/db.js"></script>
+<script src="assets/js/pages/about.js"></script>
+</body>
+</html>
