@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en" data-title="rc.title">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Record · Parchhai</title>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&family=Tiro+Gurmukhi&family=Tiro+Tamil&family=Noto+Sans+Devanagari:wght@400;500;600&family=Noto+Sans+Gurmukhi:wght@400;500;600&family=Noto+Sans+Tamil:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/app.css">
+<style>
+  .studio { position: relative; isolation: isolate; padding: clamp(24px, 4vh, 44px) var(--gutter) 40px; min-height: calc(100svh - 64px); }
+  .studio::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+    background: radial-gradient(70% 55% at 50% 100%, rgba(255, 150, 90, .20), transparent 70%), radial-gradient(50% 40% at 50% 0%, rgba(142, 107, 208, .14), transparent 70%); }
+  .studio .wrap { max-width: 1000px; }
+  .topbar { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; }
+  .who { display: flex; align-items: center; gap: 12px; padding: 6px 16px 6px 6px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); }
+  .who .avatar { width: 40px; height: 40px; font-size: 18px; }
+  .who select { background: none; border: 0; color: var(--ink); font-family: var(--display); font-size: 22px; padding-right: 8px; cursor: pointer; }
+  .who select option { background: #1a1020; font-family: var(--body); font-size: 15px; }
+  .toggle { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; color: var(--ink-2); cursor: pointer; }
+  .toggle input { appearance: none; width: 42px; height: 24px; border-radius: 999px; background: var(--line-2); position: relative; cursor: pointer; transition: background .3s; flex: none; }
+  .toggle input::after { content: ""; position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 50%; background: var(--ink); transition: transform .3s; }
+  .toggle input:checked { background: var(--saffron); }
+  .toggle input:checked::after { transform: translateX(18px); background: #2a1306; }
+  .themes { margin-top: 22px; }
+
+  .q-stage { text-align: center; margin: clamp(36px, 7vh, 72px) auto 0; max-width: 860px; }
+  .q-meta { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+  .q-text { font-family: var(--display); font-weight: 400; font-size: clamp(34px, 4.8vw, 66px); line-height: 1.18; margin-top: 22px; min-height: 2.4em;
+    transition: opacity .45s, filter .45s, transform .45s; }
+  .q-text[lang="hi"], .q-text[lang="pa"], .q-text[lang="ta"] { line-height: 1.45; font-size: clamp(28px, 4vw, 54px); }
+  .q-tr { color: var(--ink-3); margin-top: 12px; font-size: 16px; min-height: 1.6em; transition: opacity .45s; }
+  .q-stage.out .q-text { opacity: 0; filter: blur(10px); transform: translateY(14px); }
+  .q-stage.out .q-tr { opacity: 0; }
+  .q-nav { display: flex; justify-content: center; gap: 10px; margin-top: 24px; flex-wrap: wrap; }
+  .speaking .ask-btn { border-color: var(--peach); color: var(--peach); }
+  .ask-btn .bars { display: none; gap: 2px; align-items: center; height: 14px; }
+  .speaking .ask-btn .bars { display: inline-flex; }
+  .speaking .ask-btn svg { display: none; }
+  .ask-btn .bars i { width: 3px; height: 100%; border-radius: 2px; background: currentColor; animation: eq .9s ease-in-out infinite; }
+  .ask-btn .bars i:nth-child(2) { animation-delay: .15s; } .ask-btn .bars i:nth-child(3) { animation-delay: .3s; }
+  @keyframes eq { 0%, 100% { transform: scaleY(.3); } 50% { transform: scaleY(1); } }
+  .voice-note { margin-top: 10px; font-size: 13px; color: var(--ink-3); min-height: 1.2em; }
+
+  .recorder { margin: clamp(32px, 5vh, 52px) auto 0; max-width: 860px; text-align: center; }
+  #viz { width: 100%; height: 150px; display: block; }
+  .live { min-height: 1.6em; margin-top: 6px; color: var(--ink-2); font-family: var(--display); font-size: 20px; }
+  .rec-row { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 18px; margin-top: 10px; }
+  .timer { font-variant-numeric: tabular-nums; font-size: 22px; color: var(--ink-2); text-align: right; }
+  .rec-side { display: flex; gap: 10px; }
+  .rec-btn { position: relative; width: 112px; height: 112px; border-radius: 50%; display: grid; place-items: center; color: #2a1306;
+    background: radial-gradient(circle at 50% 35%, #FFE6C4, #FFB062 55%, #FF8A5C); box-shadow: 0 0 0 10px rgba(255, 176, 98, .1), 0 24px 60px -16px rgba(255, 130, 70, .8);
+    transition: transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s; }
+  .rec-btn:hover { transform: scale(1.04); }
+  .rec-btn svg { width: 40px; height: 40px; }
+  .rec-btn .stop { display: none; width: 34px; height: 34px; border-radius: 8px; background: #2a1306; }
+  .rec-btn::before, .rec-btn::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid var(--saffron); opacity: 0; }
+  .recording .rec-btn { background: radial-gradient(circle at 50% 35%, #FFD0C4, #FF7A70 60%, #E8506A); }
+  .recording .rec-btn svg { display: none; }
+  .recording .rec-btn .stop { display: block; }
+  .recording .rec-btn::before { animation: ripple 2s ease-out infinite; border-color: #FF7A70; }
+  .recording .rec-btn::after { animation: ripple 2s ease-out 1s infinite; border-color: #FF7A70; }
+  .paused .rec-btn::before, .paused .rec-btn::after { animation: none; }
+  @keyframes ripple { from { transform: scale(1); opacity: .7; } to { transform: scale(1.7); opacity: 0; } }
+  .state { margin-top: 18px; font-size: 14px; color: var(--ink-3); min-height: 1.4em; }
+  .state.err { color: var(--danger); }
+
+  .review { margin-top: 26px; text-align: left; border-top: 1px solid var(--line); padding-top: 24px; animation: stepin .6s cubic-bezier(.2,.7,.2,1); }
+  @keyframes stepin { from { opacity: 0; transform: translateY(16px); } }
+  .review .player { display: flex; align-items: center; gap: 14px; }
+  .review .player .wave { height: 48px; }
+  .review .textarea { margin-top: 18px; }
+  .review .row { justify-content: flex-end; margin-top: 18px; }
+
+  .session { margin: 40px auto 0; max-width: 860px; }
+  .session ol { list-style: none; margin-top: 14px; display: grid; gap: 8px; }
+  .session li { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 16px; background: var(--surface); border: 1px solid var(--line); }
+  .session li .t { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .session li .ok { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: rgba(143, 217, 168, .15); color: var(--ok); flex: none; }
+  .session li .ok svg { width: 14px; height: 14px; }
+  .tip { margin: 32px auto 0; max-width: 860px; display: flex; gap: 14px; align-items: flex-start; color: var(--ink-3); font-size: 14px; }
+  .tip svg { width: 20px; height: 20px; flex: none; color: var(--peach); margin-top: 2px; }
+  @media (max-width: 640px) {
+    .rec-row { grid-template-columns: 1fr; }
+    .timer { text-align: center; order: -1; }
+    .rec-side { justify-content: center; }
+    .rec-btn { margin: 0 auto; }
+  }
+</style>
+</head>
+<body data-page="record">
+<main class="studio" id="studio">
+  <div class="wrap" id="empty" hidden></div>
+  <div class="wrap" id="app" hidden>
+    <div class="topbar">
+      <div class="who"><span id="who-avatar"></span><label class="sr-only" for="who" data-i18n="rc.elder"></label><select id="who"></select></div>
+      <label class="toggle"><input type="checkbox" id="aloud" checked><span data-i18n="rc.aloud"></span></label>
+    </div>
+    <div class="chips themes" id="themes" role="group" data-i18n-aria="rc.themes"></div>
+
+    <section class="q-stage" id="stage" aria-live="polite">
+      <div class="q-meta"><span class="tag warm" id="q-theme"></span><span class="tag" id="q-count"></span></div>
+      <h1 class="q-text" id="q-text"></h1>
+      <p class="q-tr" id="q-tr"></p>
+      <div class="q-nav">
+        <button class="btn btn-quiet btn-sm" id="prev"><span data-icon="back"></span><span data-i18n="rc.prev"></span></button>
+        <button class="btn btn-ghost btn-sm ask-btn" id="ask"><span data-icon="speak"></span><span class="bars"><i></i><i></i><i></i></span><span data-i18n="rc.ask"></span></button>
+        <button class="btn btn-quiet btn-sm" id="skip"><span data-i18n="rc.skip"></span><span data-icon="arrow"></span></button>
+      </div>
+      <div class="voice-note" id="voice-note"></div>
+    </section>
+
+    <section class="card glass recorder" id="recorder">
+      <canvas id="viz" aria-hidden="true"></canvas>
+      <div class="live" id="live" aria-live="polite"></div>
+      <div class="rec-row">
+        <div class="timer" id="timer">0:00</div>
+        <button class="rec-btn" id="rec" data-i18n-aria="rc.recAria"><span data-icon="mic"></span><span class="stop"></span></button>
+        <div class="rec-side"><button class="btn btn-ghost btn-sm" id="pause" hidden data-i18n="rc.pause"></button></div>
+      </div>
+      <div class="state" id="state" role="status"></div>
+
+      <div class="review" id="review" hidden>
+        <div class="player">
+          <button class="play" id="rv-play" data-i18n-aria="c.play"><span data-icon="play"></span></button>
+          <div class="wave" id="rv-wave"></div>
+          <span class="faint small" id="rv-time"></span>
+        </div>
+        <label class="field" style="margin-top:18px"><span data-i18n="rc.transcript"></span>
+          <textarea class="textarea" id="rv-text" data-i18n-ph="rc.transcriptPh"></textarea></label>
+        <div class="row">
+          <button class="btn btn-quiet" id="retake"><span data-icon="redo"></span><span data-i18n="rc.retake"></span></button>
+          <button class="btn btn-primary" id="save"><span data-i18n="rc.save"></span><span data-icon="check"></span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="session" id="session" hidden>
+      <div class="spread"><span class="kicker" data-i18n="rc.today"></span><a class="btn btn-quiet btn-sm" href="vault.html"><span data-i18n="rc.toVault"></span><span data-icon="arrow"></span></a></div>
+      <ol id="saved"></ol>
+    </section>
+
+    <p class="tip"><span data-icon="heart"></span><span data-i18n="rc.tip"></span></p>
+  </div>
+</main>
+
+<script src="assets/js/core.js"></script>
+<script src="assets/js/db.js"></script>
+<script src="assets/js/questions.js"></script>
+<script src="assets/js/voice.js"></script>
+<script src="assets/js/player.js"></script>
+<script src="assets/js/pages/record.js"></script>
+</body>
+</html>
