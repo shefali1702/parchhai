@@ -482,6 +482,8 @@
   .finale h2 { margin: 30px auto 0; max-width: 16ch; }
   .finale .lede { margin-inline: auto; font-family: var(--display); font-size: clamp(24px, 2.6vw, 36px); color: var(--flame); }
   .finale .btn { margin-top: 36px; }
+  .foot-links { display: flex; gap: 18px; flex-wrap: wrap; }
+  .foot-links a { text-decoration: none; } .foot-links a:hover { color: var(--ink); }
   footer { padding: 40px var(--gutter); border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 20px;
     flex-wrap: wrap; color: var(--ink-3); font-size: 14px; }
 
@@ -633,6 +635,7 @@
     <a href="#sky-sec" data-i18n="nav.sky"></a>
     <a href="#ask" data-i18n="nav.ask"></a>
     <a href="#features" data-i18n="nav.features"></a>
+    <a href="vault.html" data-i18n="nav.vault"></a>
   </div>
   <div class="tools">
     <div class="langs" role="group" aria-label="Language">
@@ -647,7 +650,7 @@
     <button class="icon-btn" id="elder-nav" aria-pressed="false" aria-label="Elder mode: larger text">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 19l5-14 5 14M5 14h6M15 19l3.5-9 3.5 9M16.2 16h4.6"/></svg>
     </button>
-    <a class="btn btn-primary" href="#finale" data-i18n="nav.cta"></a>
+    <a class="btn btn-primary" href="start.html" data-i18n="nav.cta"></a>
   </div>
 </nav>
 
@@ -733,7 +736,7 @@
         <h1><span class="ln" data-i18n="hero.l1"></span><span class="ln" data-i18n="hero.l2"></span></h1>
         <p class="sub" data-i18n="hero.sub"></p>
         <div class="ctas">
-          <a class="btn btn-primary" href="#finale" data-i18n="hero.cta"></a>
+          <a class="btn btn-primary" href="record.html" data-i18n="hero.cta"></a>
           <a class="btn btn-ghost" href="#story" data-i18n="hero.cta2"></a>
         </div>
         <div class="trust"><span data-i18n="hero.t1"></span><span data-i18n="hero.t2"></span><span data-i18n="hero.t3"></span></div>
@@ -947,12 +950,17 @@
     <span data-diya id="finale-diya" class="reveal"></span>
     <h2 class="reveal" data-i18n="end.title"></h2>
     <p class="lede reveal" style="--d:.15s" data-i18n="end.sub"></p>
-    <a class="btn btn-primary reveal" style="--d:.3s" href="#top" data-i18n="end.cta"></a>
+    <a class="btn btn-primary reveal" style="--d:.3s" href="start.html" data-i18n="end.cta"></a>
   </section>
 </main>
 
 <footer>
   <span data-i18n="foot.love"></span>
+  <div class="foot-links" role="navigation" aria-label="Footer">
+    <a href="record.html" data-i18n="nav.record"></a><a href="vault.html" data-i18n="nav.vault"></a>
+    <a href="capsule.html" data-i18n="nav.capsules"></a><a href="about.html" data-i18n="nav.about"></a>
+    <a href="about.html#volunteer" data-i18n="nav.volunteer"></a>
+  </div>
   <span>© 2026 Parchhai</span>
 </footer>
 
@@ -981,7 +989,7 @@
      ===================================================================== */
   const I18N = {
     en: {
-      "nav.why": "Why", "nav.how": "How it works", "nav.sky": "Memory sky", "nav.ask": "Ask", "nav.features": "Features", "nav.cta": "Begin",
+      "nav.why": "Why", "nav.how": "How it works", "nav.sky": "Memory sky", "nav.ask": "Ask", "nav.features": "Features", "nav.cta": "Begin", "nav.vault": "Vault", "nav.record": "Record", "nav.capsules": "Time capsules", "nav.about": "About", "nav.volunteer": "Volunteer",
       "hero.kicker": "A voice archive for Indian families",
       "hero.l1": "Yaadein", "hero.l2": "<em>bolti</em> hain.",
       "hero.t1": "4 languages", "hero.t2": "No typing needed", "hero.t3": "Only real voices",
@@ -1037,7 +1045,7 @@
       "foot.love": "Made with love for every Nani, Dadi, Paati and Thatha.",
     },
     hi: {
-      "nav.why": "क्यों", "nav.how": "कैसे काम करता है", "nav.sky": "यादों का आसमान", "nav.ask": "पूछिए", "nav.features": "ख़ासियतें", "nav.cta": "शुरू करें",
+      "nav.why": "क्यों", "nav.how": "कैसे काम करता है", "nav.sky": "यादों का आसमान", "nav.ask": "पूछिए", "nav.features": "ख़ासियतें", "nav.cta": "शुरू करें", "nav.vault": "तिजोरी", "nav.record": "रिकॉर्ड", "nav.capsules": "टाइम कैप्सूल", "nav.about": "परिचय", "nav.volunteer": "स्वयंसेवक बनें",
       "hero.kicker": "भारतीय परिवारों के लिए आवाज़ों का ख़ज़ाना",
       "hero.l1": "यादें", "hero.l2": "<em>बोलती</em> हैं।",
       "hero.t1": "4 भाषाएँ", "hero.t2": "टाइपिंग की ज़रूरत नहीं", "hero.t3": "सिर्फ़ असली आवाज़ें",
@@ -1093,7 +1101,7 @@
       "foot.love": "हर नानी, दादी, पाटी और थाथा के लिए प्यार से बनाया गया।",
     },
     pa: {
-      "nav.why": "ਕਿਉਂ", "nav.how": "ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ", "nav.sky": "ਯਾਦਾਂ ਦਾ ਅਸਮਾਨ", "nav.ask": "ਪੁੱਛੋ", "nav.features": "ਖ਼ਾਸੀਅਤਾਂ", "nav.cta": "ਸ਼ੁਰੂ ਕਰੋ",
+      "nav.why": "ਕਿਉਂ", "nav.how": "ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ", "nav.sky": "ਯਾਦਾਂ ਦਾ ਅਸਮਾਨ", "nav.ask": "ਪੁੱਛੋ", "nav.features": "ਖ਼ਾਸੀਅਤਾਂ", "nav.cta": "ਸ਼ੁਰੂ ਕਰੋ", "nav.vault": "ਖ਼ਜ਼ਾਨਾ", "nav.record": "ਰਿਕਾਰਡ", "nav.capsules": "ਟਾਈਮ ਕੈਪਸੂਲ", "nav.about": "ਜਾਣ-ਪਛਾਣ", "nav.volunteer": "ਵਲੰਟੀਅਰ ਬਣੋ",
       "hero.kicker": "ਭਾਰਤੀ ਪਰਿਵਾਰਾਂ ਲਈ ਆਵਾਜ਼ਾਂ ਦਾ ਖ਼ਜ਼ਾਨਾ",
       "hero.l1": "ਯਾਦਾਂ", "hero.l2": "<em>ਬੋਲਦੀਆਂ</em> ਨੇ।",
       "hero.t1": "4 ਭਾਸ਼ਾਵਾਂ", "hero.t2": "ਟਾਈਪਿੰਗ ਦੀ ਲੋੜ ਨਹੀਂ", "hero.t3": "ਸਿਰਫ਼ ਅਸਲੀ ਆਵਾਜ਼ਾਂ",
@@ -1149,7 +1157,7 @@
       "foot.love": "ਹਰ ਨਾਨੀ, ਦਾਦੀ, ਪਾਟੀ ਅਤੇ ਥਾਥਾ ਲਈ ਪਿਆਰ ਨਾਲ ਬਣਾਇਆ ਗਿਆ।",
     },
     ta: {
-      "nav.why": "ஏன்", "nav.how": "எப்படி", "nav.sky": "நினைவு வானம்", "nav.ask": "கேளுங்கள்", "nav.features": "சிறப்புகள்", "nav.cta": "தொடங்குங்கள்",
+      "nav.why": "ஏன்", "nav.how": "எப்படி", "nav.sky": "நினைவு வானம்", "nav.ask": "கேளுங்கள்", "nav.features": "சிறப்புகள்", "nav.cta": "தொடங்குங்கள்", "nav.vault": "பெட்டகம்", "nav.record": "பதிவு", "nav.capsules": "காலப் பெட்டகம்", "nav.about": "எங்களைப் பற்றி", "nav.volunteer": "தன்னார்வலர் ஆகுங்கள்",
       "hero.kicker": "இந்தியக் குடும்பங்களுக்கான குரல் பொக்கிஷம்",
       "hero.l1": "நினைவுகள்", "hero.l2": "<em>பேசும்</em>.",
       "hero.t1": "4 மொழிகள்", "hero.t2": "தட்டச்சு தேவையில்லை", "hero.t3": "உண்மையான குரல்கள் மட்டும்",
@@ -1508,6 +1516,7 @@
     document.body.classList.add("entered");
     light.lastMove = -1e9;
     if (finePointer && !calmNow()) document.body.classList.add("flame-cursor");
+    try { sessionStorage.setItem("parchhai-entered", "1"); } catch {}
     setTimeout(() => { splash.remove(); splashOn = false; }, calmNow() ? 0 : 1900);
   }
   $(".sp-enter").addEventListener("click", exitSplash);
@@ -1859,7 +1868,14 @@
   setCalm(store.get("parchhai-calm") === "1" || prefersReduced);
   applyLang(store.get("parchhai-lang") || "en", false);
   const remembered = store.get("parchhai-lang");
-  if (remembered) $(`.gate-diya[data-lang="${remembered}"]`)?.focus({ preventScroll: true });
+  let seen = false;
+  try { seen = sessionStorage.getItem("parchhai-entered") === "1"; } catch {}
+  if (seen) {
+    /* already watched the splash in this visit: go straight to the homepage, quietly */
+    gate.remove(); splash.remove();
+    document.body.classList.remove("gated"); document.body.classList.add("entered");
+    if (finePointer && !root.classList.contains("calm")) document.body.classList.add("flame-cursor");
+  } else if (remembered) $(`.gate-diya[data-lang="${remembered}"]`)?.focus({ preventScroll: true });
   requestAnimationFrame(frame);
 })();
 </script>
