@@ -18,7 +18,7 @@
   /* ---------- strings shared by every page ---------- */
   const COMMON = {
     en: {
-      "nav.home": "Home", "nav.record": "Record", "nav.vault": "Vault", "nav.capsules": "Capsules", "nav.about": "About", "nav.start": "Begin",
+      "nav.home": "Home", "nav.record": "Record", "nav.vault": "Vault", "nav.capsules": "Capsules", "nav.about": "About", "nav.start": "Begin", "nav.signout": "Sign out", "c.error": "Something went wrong. Please check your connection and try again.",
       "a11y.elder": "Elder mode: larger text", "a11y.calm": "Calm mode: no motion",
       "foot.love": "Made with love for every Nani, Dadi, Paati and Thatha.",
       "foot.local": "Prototype: everything you save stays in this browser.",
@@ -30,7 +30,7 @@
       "theme.history": "History we lived", "theme.kitchen": "The kitchen", "theme.lessons": "Life lessons",
     },
     hi: {
-      "nav.home": "होम", "nav.record": "रिकॉर्ड", "nav.vault": "तिजोरी", "nav.capsules": "कैप्सूल", "nav.about": "परिचय", "nav.start": "शुरू करें",
+      "nav.home": "होम", "nav.record": "रिकॉर्ड", "nav.vault": "तिजोरी", "nav.capsules": "कैप्सूल", "nav.about": "परिचय", "nav.start": "शुरू करें", "nav.signout": "साइन आउट", "c.error": "कुछ गड़बड़ हो गई। कृपया इंटरनेट जाँचकर फिर कोशिश कीजिए।",
       "a11y.elder": "बुज़ुर्ग मोड: बड़े अक्षर", "a11y.calm": "शांत मोड: कोई हलचल नहीं",
       "foot.love": "हर नानी, दादी, पाटी और थाथा के लिए प्यार से बनाया गया।",
       "foot.local": "प्रोटोटाइप: आप जो भी सहेजते हैं, वह इसी ब्राउज़र में रहता है।",
@@ -42,7 +42,7 @@
       "theme.history": "जिया हुआ इतिहास", "theme.kitchen": "रसोई", "theme.lessons": "ज़िंदगी की सीख",
     },
     pa: {
-      "nav.home": "ਘਰ", "nav.record": "ਰਿਕਾਰਡ", "nav.vault": "ਖ਼ਜ਼ਾਨਾ", "nav.capsules": "ਕੈਪਸੂਲ", "nav.about": "ਜਾਣ-ਪਛਾਣ", "nav.start": "ਸ਼ੁਰੂ ਕਰੋ",
+      "nav.home": "ਘਰ", "nav.record": "ਰਿਕਾਰਡ", "nav.vault": "ਖ਼ਜ਼ਾਨਾ", "nav.capsules": "ਕੈਪਸੂਲ", "nav.about": "ਜਾਣ-ਪਛਾਣ", "nav.start": "ਸ਼ੁਰੂ ਕਰੋ", "nav.signout": "ਸਾਈਨ ਆਊਟ", "c.error": "ਕੁਝ ਗੜਬੜ ਹੋ ਗਈ। ਕਿਰਪਾ ਕਰਕੇ ਇੰਟਰਨੈੱਟ ਜਾਂਚ ਕੇ ਫਿਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
       "a11y.elder": "ਬਜ਼ੁਰਗ ਮੋਡ: ਵੱਡੇ ਅੱਖਰ", "a11y.calm": "ਸ਼ਾਂਤ ਮੋਡ: ਕੋਈ ਹਿਲਜੁਲ ਨਹੀਂ",
       "foot.love": "ਹਰ ਨਾਨੀ, ਦਾਦੀ, ਪਾਟੀ ਅਤੇ ਥਾਥਾ ਲਈ ਪਿਆਰ ਨਾਲ ਬਣਾਇਆ ਗਿਆ।",
       "foot.local": "ਪ੍ਰੋਟੋਟਾਈਪ: ਤੁਸੀਂ ਜੋ ਵੀ ਸੰਭਾਲਦੇ ਹੋ, ਉਹ ਇਸੇ ਬ੍ਰਾਊਜ਼ਰ ਵਿੱਚ ਰਹਿੰਦਾ ਹੈ।",
@@ -54,7 +54,7 @@
       "theme.history": "ਜੀਵਿਆ ਇਤਿਹਾਸ", "theme.kitchen": "ਰਸੋਈ", "theme.lessons": "ਜ਼ਿੰਦਗੀ ਦੀ ਸਿੱਖਿਆ",
     },
     ta: {
-      "nav.home": "முகப்பு", "nav.record": "பதிவு", "nav.vault": "பெட்டகம்", "nav.capsules": "காலப் பெட்டி", "nav.about": "எங்களைப் பற்றி", "nav.start": "தொடங்குங்கள்",
+      "nav.home": "முகப்பு", "nav.record": "பதிவு", "nav.vault": "பெட்டகம்", "nav.capsules": "காலப் பெட்டி", "nav.about": "எங்களைப் பற்றி", "nav.start": "தொடங்குங்கள்", "nav.signout": "வெளியேறு", "c.error": "ஏதோ தவறு நடந்தது. இணைய இணைப்பைச் சரிபார்த்து மீண்டும் முயலுங்கள்.",
       "a11y.elder": "பெரியவர் முறை: பெரிய எழுத்துகள்", "a11y.calm": "அமைதி முறை: அசைவுகள் இல்லை",
       "foot.love": "ஒவ்வொரு நானி, தாதி, பாட்டி, தாத்தாவுக்கும் அன்புடன் உருவாக்கப்பட்டது.",
       "foot.local": "முன்மாதிரி: நீங்கள் சேமிப்பவை அனைத்தும் இந்த உலாவியிலேயே இருக்கும்.",
@@ -128,6 +128,8 @@
     phone: '<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/>',
     lock: '<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>',
     redo: '<path d="M4 12a8 8 0 1 0 2.3-5.6M4 4v5h5"/>',
+    logout: '<path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 16l-4-4 4-4M6 12h10"/>',
+    copy: '<rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/>',
   };
   const icon = (name, cls = "") => `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[name] || ""}</svg>`;
 
@@ -155,6 +157,7 @@
         <div class="langs" role="group" aria-label="Language">${LANGS.map(l => `<button data-set-lang="${l}" lang="${l}">${LANG_SHORT[l]}</button>`).join("")}</div>
         <button class="icon-btn" data-toggle="elder" aria-pressed="false" data-i18n-aria="a11y.elder">${icon("elder")}</button>
         <button class="icon-btn" data-toggle="calm" aria-pressed="false" data-i18n-aria="a11y.calm">${icon("calm")}</button>
+        ${P.db?.cloud && P.db.signedIn() ? `<button class="icon-btn" id="signout" data-i18n-aria="nav.signout">${icon("logout")}</button>` : ""}
         ${page === "start" ? "" : `<a class="btn btn-primary" href="${P.db?.elders().length ? "record.html" : "start.html"}" data-i18n="${P.db?.elders().length ? "nav.record" : "nav.start"}"></a>`}
       </div>`;
     document.body.prepend(nav);
@@ -168,6 +171,7 @@
       <nav aria-label="Footer"><a href="index.html" data-i18n="nav.home"></a>${PAGES.map(p => `<a href="${p.href}" data-i18n="nav.${p.id}"></a>`).join("")}</nav></div>`;
     document.querySelector("main")?.after(foot);
 
+    nav.querySelector("#signout")?.addEventListener("click", async () => { await P.db.signOut(); location.href = "index.html"; });
     nav.querySelectorAll("[data-set-lang]").forEach(b => b.addEventListener("click", () => setLang(b.dataset.setLang)));
     nav.querySelectorAll("[data-toggle]").forEach(b => {
       b.setAttribute("aria-pressed", String(root.classList.contains(b.dataset.toggle)));
@@ -252,7 +256,13 @@
     t, strip, apply, setLang, register(d) { dicts.push(d); },
     toast, reveal, lightCards, esc, fmtTime, fmtDate, uid, avatar, ding, setMode,
     boot(init) {
-      const start = () => {
+      const start = async () => {
+        await P.db?.ready?.();
+        /* cloud mode: the family pages need a signed-in member of a family */
+        const page = document.body.dataset.page;
+        if (P.db?.cloud && ["record", "vault", "capsules"].includes(page) && !(P.db.signedIn() && P.db.hasFamily())) {
+          location.replace(`start.html${P.db.signedIn() ? "" : "?signin"}`); return;
+        }
         grain();
         setMode("elder", store.get("parchhai-elder") === "1");
         setMode("calm", store.get("parchhai-calm") === "1" || matchMedia("(prefers-reduced-motion: reduce)").matches);

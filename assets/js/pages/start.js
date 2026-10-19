@@ -26,6 +26,13 @@ P.register({
     "st.create": "Create the vault",
     "st.doneT": "{call}'s vault is ready.", "st.doneP": "Start with one question. Stories have a way of leading to more stories.",
     "st.firstInterview": "Start the first interview", "st.openVault": "Open the vault",
+    "st.password": "Password", "st.passwordPh": "At least 6 characters", "st.emailShort": "Email",
+    "st.invite": "Invite code (optional)", "st.inviteHint": "If someone in your family already uses Parchhai", "st.signIn": "Sign in",
+    "st.confirmEmail": "Almost there. We've sent a link to {email}. Confirm it, then come back here and sign in.",
+    "st.backCloud": "Sign in to open your family's vault on any device.", "st.signedInAs": "You're signed in as {email}.",
+    "st.errEmail": "Please add a valid email", "st.errPw": "The password needs at least 6 characters", "st.badLogin": "That email and password don't match",
+    "st.exists": "This email already has an account. Use “I've been here before” to sign in.", "st.badCode": "That invite code didn't work. Please check it.",
+    "st.joined": "You've joined {family}", "st.busy": "One moment…",
     "st.errName": "Please add their name", "st.errYou": "Please add your name", "st.errLang": "Please pick a language", "st.errConsent": "Both promises are needed to begin",
   },
   hi: {
@@ -54,6 +61,13 @@ P.register({
     "st.create": "तिजोरी बनाएँ",
     "st.doneT": "{call} की तिजोरी तैयार है।", "st.doneP": "एक सवाल से शुरू कीजिए। एक कहानी से दूसरी कहानी निकल ही आती है।",
     "st.firstInterview": "पहला इंटरव्यू शुरू करें", "st.openVault": "तिजोरी खोलें",
+    "st.password": "पासवर्ड", "st.passwordPh": "कम से कम 6 अक्षर", "st.emailShort": "ईमेल",
+    "st.invite": "इनवाइट कोड (वैकल्पिक)", "st.inviteHint": "अगर आपके परिवार में कोई पहले से परछाईं इस्तेमाल करता है", "st.signIn": "साइन इन करें",
+    "st.confirmEmail": "बस थोड़ा और। हमने {email} पर एक लिंक भेजा है। उसे कन्फ़र्म कीजिए, फिर यहाँ लौटकर साइन इन कीजिए।",
+    "st.backCloud": "किसी भी डिवाइस पर अपने परिवार की तिजोरी खोलने के लिए साइन इन कीजिए।", "st.signedInAs": "आप {email} से साइन इन हैं।",
+    "st.errEmail": "कृपया सही ईमेल लिखिए", "st.errPw": "पासवर्ड में कम से कम 6 अक्षर चाहिए", "st.badLogin": "ईमेल और पासवर्ड मेल नहीं खाते",
+    "st.exists": "इस ईमेल का अकाउंट पहले से है। साइन इन के लिए “मैं पहले आ चुका/चुकी हूँ” चुनिए।", "st.badCode": "यह इनवाइट कोड काम नहीं किया। कृपया जाँचिए।",
+    "st.joined": "आप {family} से जुड़ गए", "st.busy": "एक पल…",
     "st.errName": "कृपया उनका नाम लिखिए", "st.errYou": "कृपया अपना नाम लिखिए", "st.errLang": "कृपया एक भाषा चुनिए", "st.errConsent": "शुरू करने के लिए दोनों वादे ज़रूरी हैं",
   },
   pa: {
@@ -82,6 +96,13 @@ P.register({
     "st.create": "ਖ਼ਜ਼ਾਨਾ ਬਣਾਓ",
     "st.doneT": "{call} ਦਾ ਖ਼ਜ਼ਾਨਾ ਤਿਆਰ ਹੈ।", "st.doneP": "ਇੱਕ ਸਵਾਲ ਨਾਲ ਸ਼ੁਰੂ ਕਰੋ। ਇੱਕ ਕਹਾਣੀ ਵਿੱਚੋਂ ਦੂਜੀ ਕਹਾਣੀ ਨਿਕਲ ਹੀ ਆਉਂਦੀ ਹੈ।",
     "st.firstInterview": "ਪਹਿਲਾ ਇੰਟਰਵਿਊ ਸ਼ੁਰੂ ਕਰੋ", "st.openVault": "ਖ਼ਜ਼ਾਨਾ ਖੋਲ੍ਹੋ",
+    "st.password": "ਪਾਸਵਰਡ", "st.passwordPh": "ਘੱਟੋ-ਘੱਟ 6 ਅੱਖਰ", "st.emailShort": "ਈਮੇਲ",
+    "st.invite": "ਇਨਵਾਈਟ ਕੋਡ (ਵਿਕਲਪਿਕ)", "st.inviteHint": "ਜੇ ਤੁਹਾਡੇ ਪਰਿਵਾਰ ਵਿੱਚ ਕੋਈ ਪਹਿਲਾਂ ਹੀ ਪਰਛਾਈਂ ਵਰਤਦਾ ਹੈ", "st.signIn": "ਸਾਈਨ ਇਨ ਕਰੋ",
+    "st.confirmEmail": "ਬੱਸ ਥੋੜ੍ਹਾ ਹੋਰ। ਅਸੀਂ {email} 'ਤੇ ਇੱਕ ਲਿੰਕ ਭੇਜਿਆ ਹੈ। ਉਸਨੂੰ ਪੱਕਾ ਕਰੋ, ਫਿਰ ਇੱਥੇ ਮੁੜ ਕੇ ਸਾਈਨ ਇਨ ਕਰੋ।",
+    "st.backCloud": "ਕਿਸੇ ਵੀ ਡਿਵਾਈਸ 'ਤੇ ਆਪਣੇ ਪਰਿਵਾਰ ਦਾ ਖ਼ਜ਼ਾਨਾ ਖੋਲ੍ਹਣ ਲਈ ਸਾਈਨ ਇਨ ਕਰੋ।", "st.signedInAs": "ਤੁਸੀਂ {email} ਨਾਲ ਸਾਈਨ ਇਨ ਹੋ।",
+    "st.errEmail": "ਕਿਰਪਾ ਕਰਕੇ ਸਹੀ ਈਮੇਲ ਲਿਖੋ", "st.errPw": "ਪਾਸਵਰਡ ਵਿੱਚ ਘੱਟੋ-ਘੱਟ 6 ਅੱਖਰ ਚਾਹੀਦੇ ਹਨ", "st.badLogin": "ਈਮੇਲ ਅਤੇ ਪਾਸਵਰਡ ਮੇਲ ਨਹੀਂ ਖਾਂਦੇ",
+    "st.exists": "ਇਸ ਈਮੇਲ ਦਾ ਅਕਾਊਂਟ ਪਹਿਲਾਂ ਹੀ ਹੈ। ਸਾਈਨ ਇਨ ਲਈ “ਮੈਂ ਪਹਿਲਾਂ ਆ ਚੁੱਕਾ/ਚੁੱਕੀ ਹਾਂ” ਚੁਣੋ।", "st.badCode": "ਇਹ ਇਨਵਾਈਟ ਕੋਡ ਕੰਮ ਨਹੀਂ ਕੀਤਾ। ਕਿਰਪਾ ਕਰਕੇ ਜਾਂਚੋ।",
+    "st.joined": "ਤੁਸੀਂ {family} ਨਾਲ ਜੁੜ ਗਏ", "st.busy": "ਇੱਕ ਪਲ…",
     "st.errName": "ਕਿਰਪਾ ਕਰਕੇ ਉਨ੍ਹਾਂ ਦਾ ਨਾਂ ਲਿਖੋ", "st.errYou": "ਕਿਰਪਾ ਕਰਕੇ ਆਪਣਾ ਨਾਂ ਲਿਖੋ", "st.errLang": "ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਬੋਲੀ ਚੁਣੋ", "st.errConsent": "ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਦੋਵੇਂ ਵਾਅਦੇ ਜ਼ਰੂਰੀ ਹਨ",
   },
   ta: {
@@ -110,6 +131,13 @@ P.register({
     "st.create": "பெட்டகத்தை உருவாக்குங்கள்",
     "st.doneT": "{call} அவர்களின் பெட்டகம் தயார்.", "st.doneP": "ஒரு கேள்வியுடன் தொடங்குங்கள். ஒரு கதை இன்னொரு கதைக்கு வழி காட்டும்.",
     "st.firstInterview": "முதல் நேர்காணலைத் தொடங்குங்கள்", "st.openVault": "பெட்டகத்தைத் திறங்கள்",
+    "st.password": "கடவுச்சொல்", "st.passwordPh": "குறைந்தது 6 எழுத்துகள்", "st.emailShort": "மின்னஞ்சல்",
+    "st.invite": "அழைப்புக் குறியீடு (விருப்பம்)", "st.inviteHint": "உங்கள் குடும்பத்தில் யாராவது ஏற்கனவே Parchhai பயன்படுத்தினால்", "st.signIn": "உள்நுழைக",
+    "st.confirmEmail": "இன்னும் கொஞ்சம்தான். {email} முகவரிக்கு ஒரு இணைப்பை அனுப்பியுள்ளோம். அதை உறுதிசெய்து, பிறகு இங்கே திரும்பி உள்நுழையுங்கள்.",
+    "st.backCloud": "எந்தச் சாதனத்திலும் உங்கள் குடும்பப் பெட்டகத்தைத் திறக்க உள்நுழையுங்கள்.", "st.signedInAs": "நீங்கள் {email} மூலம் உள்நுழைந்துள்ளீர்கள்.",
+    "st.errEmail": "சரியான மின்னஞ்சலைச் சேர்க்கவும்", "st.errPw": "கடவுச்சொல்லுக்குக் குறைந்தது 6 எழுத்துகள் தேவை", "st.badLogin": "மின்னஞ்சலும் கடவுச்சொல்லும் பொருந்தவில்லை",
+    "st.exists": "இந்த மின்னஞ்சலுக்கு ஏற்கனவே கணக்கு உள்ளது. உள்நுழைய “முன்பே வந்திருக்கிறேன்” என்பதைத் தேர்ந்தெடுங்கள்.", "st.badCode": "இந்த அழைப்புக் குறியீடு வேலை செய்யவில்லை. சரிபாருங்கள்.",
+    "st.joined": "நீங்கள் {family} உடன் இணைந்துவிட்டீர்கள்", "st.busy": "ஒரு நொடி…",
     "st.errName": "அவர்களின் பெயரைச் சேர்க்கவும்", "st.errYou": "உங்கள் பெயரைச் சேர்க்கவும்", "st.errLang": "ஒரு மொழியைத் தேர்ந்தெடுக்கவும்", "st.errConsent": "தொடங்க இரண்டு வாக்குறுதிகளும் தேவை",
   },
 });
@@ -121,8 +149,15 @@ P.boot(() => {
   const form = { role: 0, call: "", lang: "", photo: null };
   let step = 0;
 
+  const cloud = P.db.cloud;
   const fam = P.db.family();
   if (fam) { $("#f-you").value = fam.name || ""; $("#f-email").value = fam.email || ""; form.role = fam.role ?? 0; }
+  $$("[data-cloud]").forEach(el => { el.hidden = !cloud; });
+  if (cloud) {
+    $("#email-l").dataset.i18n = "st.emailShort";
+    if (P.db.signedIn()) { $("#pw-field").hidden = true; $("#f-email").disabled = true; }
+  }
+  const busy = (btn, on) => { btn.disabled = on; btn.style.opacity = on ? .6 : ""; };
 
   /* chips + language cards */
   function renderChoices() {
@@ -159,6 +194,13 @@ P.boot(() => {
     paintBack();
   });
   function paintBack() {
+    if (cloud) {
+      const inside = P.db.signedIn() && P.db.hasFamily();
+      $("#signin").hidden = P.db.signedIn();
+      $("#back-msg").textContent = P.db.signedIn() ? P.t("st.signedInAs", { email: P.db.user().email }) : P.t("st.backCloud");
+      $("#back-actions").innerHTML = inside ? `<a class="btn btn-primary" href="vault.html">${P.t("st.continue")} ${P.icon("arrow")}</a>` : "";
+      return;
+    }
     const has = P.db.elders().length;
     $("#back-msg").textContent = has ? P.t("st.backFound", { name: fam?.name || "" }) : P.t("st.backNone");
     $("#back-actions").innerHTML = has
@@ -166,6 +208,15 @@ P.boot(() => {
       : `<button class="btn btn-ghost" id="sample">${P.t("st.sample")}</button>`;
     $("#sample")?.addEventListener("click", async () => { await P.db.seedSample(); location.href = "vault.html"; });
   }
+  $("#signin").addEventListener("submit", async e => {
+    e.preventDefault();
+    const btn = e.target.querySelector("button"); busy(btn, true);
+    const r = await P.db.signIn($("#s-email").value.trim(), $("#s-pw").value);
+    busy(btn, false);
+    if (!r.ok) return P.toast(P.t("st.badLogin"));
+    if (P.db.hasFamily()) return (location.href = P.db.elders().length ? "vault.html" : "start.html?add");
+    location.href = "start.html";
+  });
 
   /* stepping */
   function paintScene() {
@@ -195,21 +246,54 @@ P.boot(() => {
     if (step === 2 && !form.lang) return "st.errLang";
     if (step === 3 && !($("#c1").checked && $("#c2").checked)) return "st.errConsent";
   }
-  $("#next").addEventListener("click", () => {
+  /* step 0 in cloud mode: create the account, then join or create the family */
+  async function account() {
+    const name = $("#f-you").value.trim(), email = $("#f-email").value.trim(), code = $("#f-invite").value.trim();
+    if (!P.db.signedIn()) {
+      if (!/^\S+@\S+\.\S+$/.test(email)) { P.toast(P.t("st.errEmail")); return false; }
+      if ($("#f-pw").value.length < 6) { P.toast(P.t("st.errPw")); return false; }
+      const r = await P.db.signUp(email, $("#f-pw").value, { name, role: form.role });
+      if (!r.ok) { P.toast(/registered|exists/i.test(r.error?.message || "") ? P.t("st.exists") : P.esc(r.error?.message || P.t("c.error"))); return false; }
+      if (r.needsConfirm) {
+        $('[data-tab="back"]').click();
+        $("#back-msg").textContent = P.t("st.confirmEmail", { email });
+        $("#s-email").value = email;
+        return false;
+      }
+    }
+    if (code && !P.db.hasFamily()) {
+      const j = await P.db.joinFamily(code);
+      if (!j.ok) { P.toast(P.t("st.badCode")); return false; }
+      P.toast(P.t("st.joined", { family: P.esc(P.db.familyInfo()?.name || "") }));
+      if (P.db.elders().length) { location.href = "vault.html"; return false; }
+    }
+    await P.db.saveFamily({ name, email, role: form.role });
+    return true;
+  }
+
+  $("#next").addEventListener("click", async () => {
     const err = validate();
     if (err) return P.toast(P.t(err));
-    if (step === 0) P.db.saveFamily({ name: $("#f-you").value.trim(), email: $("#f-email").value.trim(), role: form.role });
-    if (step === 3) {
-      const elder = P.db.saveElder({
-        name: $("#f-name").value.trim(), callName: callName(), lang: form.lang, dialect: $("#f-dialect").value.trim(),
-        birthYear: +$("#f-born").value || null, hometown: $("#f-town").value.trim(), photo: form.photo, consentAt: Date.now(),
-      });
-      P.db.setActive(elder.id);
-      $("#done-avatar").innerHTML = P.avatar(elder, "xl");
-      $("#done-t").textContent = P.t("st.doneT", { call: elder.callName });
-      P.ding("bell");
-    }
-    show(step + 1);
+    const btn = $("#next");
+    busy(btn, true);
+    try {
+      if (step === 0) {
+        if (cloud) { if (!(await account())) return; }
+        else await P.db.saveFamily({ name: $("#f-you").value.trim(), email: $("#f-email").value.trim(), role: form.role });
+      }
+      if (step === 3) {
+        const elder = await P.db.saveElder({
+          name: $("#f-name").value.trim(), callName: callName(), lang: form.lang, dialect: $("#f-dialect").value.trim(),
+          birthYear: +$("#f-born").value || null, hometown: $("#f-town").value.trim(), photo: form.photo, consentAt: Date.now(),
+        });
+        P.db.setActive(elder.id);
+        $("#done-avatar").innerHTML = P.avatar(elder, "xl");
+        $("#done-t").textContent = P.t("st.doneT", { call: elder.callName });
+        P.ding("bell");
+      }
+      show(step + 1);
+    } catch { P.toast(P.t("c.error")); }
+    finally { busy(btn, false); }
   });
   $("#prev").addEventListener("click", () => show(Math.max(0, step - 1)));
 
@@ -220,6 +304,8 @@ P.boot(() => {
     if (step === 4) $("#done-t").textContent = P.t("st.doneT", { call: P.db.active()?.callName || "" });
   });
 
-  show(new URLSearchParams(location.search).has("add") && fam ? 1 : 0);
+  const params = new URLSearchParams(location.search);
+  show(params.has("add") && fam && P.db.hasFamily() ? 1 : 0);
+  if (params.has("signin") || (cloud && P.db.signedIn() && P.db.hasFamily() && !params.has("add"))) $('[data-tab="back"]').click();
   renderChoices();
 });

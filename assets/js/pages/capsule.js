@@ -108,10 +108,11 @@ P.boot(async () => {
     e.preventDefault();
     if (!$("#f-to").value.trim()) return P.toast(P.t("cp.errTo"));
     if (!$("#f-date").value) return P.toast(P.t("cp.errDate"));
-    const c = P.db.saveCapsule({
+    let c;
+    try { c = await P.db.saveCapsule({
       elderId: $("#f-elder").value || null, to: $("#f-to").value.trim(), occasion: occ,
       unlockAt: new Date(`${$("#f-date").value}T00:00:00`).getTime(), storyId: $("#f-story").value || null, note: $("#f-note").value.trim(),
-    });
+    }); } catch { return P.toast(P.t("c.error")); }
     const stamp = $("#stamp");
     stamp.classList.remove("go"); void stamp.offsetWidth; stamp.classList.add("go");
     thud();
@@ -167,7 +168,10 @@ P.boot(async () => {
   /* press and hold an unlocked seal to break it */
   function wireEnv(env) {
     const c = P.db.capsules().find(x => x.id === env.dataset.id), seal = env.querySelector(".seal"), ring = env.querySelector(".ring circle");
-    env.querySelector(".del").onclick = () => { if (confirm(P.t("cp.confirm"))) { P.db.removeCapsule(c.id); paintShelf(); } };
+    env.querySelector(".del").onclick = async () => {
+      if (!confirm(P.t("cp.confirm"))) return;
+      try { await P.db.removeCapsule(c.id); paintShelf(); } catch { P.toast(P.t("c.error")); }
+    };
     if (c.unlockAt > Date.now()) {
       seal.onclick = () => { env.classList.remove("shake"); void env.offsetWidth; env.classList.add("shake"); P.toast(P.t("cp.locked", { date: P.fmtDate(c.unlockAt) })); };
       return;
@@ -200,8 +204,9 @@ P.boot(async () => {
           ${s.transcript ? `<div style="margin-top:14px;font-size:18px" lang="${s.lang}">${P.esc(s.transcript)}</div>` : ""}` : ""}
         ${elder ? `<div class="sig">${P.t("cp.with", { call: P.esc(elder.callName || elder.name) })}</div>` : ""}
       </div>`;
+    const blob = s && await P.db.audio(s);
     if (s) player = P.player.mount({ wave: sheet.querySelector(".wave"), btn: sheet.querySelector(".play"), time: sheet.querySelector(".time"),
-      blob: s.audio, duration: s.duration, peaks: s.audio ? await P.player.peaks(s.audio, 56) : P.player.fake(56, 3) });
+      blob, duration: s.duration, peaks: blob ? await P.player.peaks(blob, 56) : P.player.fake(56, 3) });
     sheet.showModal();
   }
   $("#sheet-close").onclick = () => sheet.close();

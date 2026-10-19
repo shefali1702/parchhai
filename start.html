@@ -104,13 +104,20 @@
         <h2 data-i18n="st.s0t"></h2>
         <div class="stack">
           <label class="field"><span data-i18n="st.yourName"></span><input class="input" id="f-you" autocomplete="name" data-i18n-ph="st.yourNamePh"></label>
-          <label class="field"><span data-i18n="st.email"></span><input class="input" id="f-email" type="email" autocomplete="email" placeholder="you@example.com"></label>
+          <label class="field"><span id="email-l" data-i18n="st.email"></span><input class="input" id="f-email" type="email" autocomplete="email" placeholder="you@example.com"></label>
+          <label class="field" data-cloud hidden id="pw-field"><span data-i18n="st.password"></span><input class="input" id="f-pw" type="password" autocomplete="new-password" data-i18n-ph="st.passwordPh"></label>
           <div class="field"><span data-i18n="st.iam"></span><div class="chips" id="f-role"></div></div>
+          <label class="field" data-cloud hidden id="invite-field"><span data-i18n="st.invite"></span><input class="input" id="f-invite" autocomplete="off" style="text-transform:uppercase" data-i18n-ph="st.inviteHint"></label>
         </div>
       </div>
       <div data-pane="back" hidden>
         <h2 data-i18n="st.backT"></h2>
         <p class="muted" style="margin-top:14px" id="back-msg"></p>
+        <form class="stack" id="signin" data-cloud hidden style="margin-top:22px" novalidate>
+          <label class="field"><span data-i18n="st.emailShort"></span><input class="input" id="s-email" type="email" autocomplete="email" placeholder="you@example.com"></label>
+          <label class="field"><span data-i18n="st.password"></span><input class="input" id="s-pw" type="password" autocomplete="current-password"></label>
+          <button class="btn btn-primary" type="submit"><span data-i18n="st.signIn"></span><span data-icon="arrow"></span></button>
+        </form>
         <div class="row" style="margin-top:24px" id="back-actions"></div>
       </div>
     </div>
@@ -171,6 +178,8 @@
   </section>
 </main>
 
+<script src="assets/js/config.js"></script>
+<script src="assets/vendor/supabase-js@2.45.4/supabase.js"></script>
 <script src="assets/js/core.js"></script>
 <script src="assets/js/db.js"></script>
 <script src="assets/js/pages/start.js"></script>

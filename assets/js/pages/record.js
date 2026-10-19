@@ -16,7 +16,7 @@ P.register({
     "rc.noRec": "This browser can't record audio. Please try Chrome, Edge or Safari.",
     "rc.voiceUsing": "Voice: {name}", "rc.voiceFallback": "No Punjabi voice on this device, so the question was read in Hindi.",
     "rc.noVoice": "This device has no {lang} voice. Read it to them yourself, it's even warmer.",
-    "rc.listening": "Listening…", "rc.sample": "Explore a sample vault",
+    "rc.listening": "Listening…", "rc.saving": "Saving to the vault…", "rc.sample": "Explore a sample vault",
   },
   hi: {
     "rc.title": "रिकॉर्ड", "rc.elder": "हम किससे बात कर रहे हैं?", "rc.aloud": "सवाल पढ़कर सुनाएँ", "rc.themes": "विषय", "rc.all": "सभी विषय",
@@ -33,7 +33,7 @@ P.register({
     "rc.noRec": "यह ब्राउज़र ऑडियो रिकॉर्ड नहीं कर सकता। कृपया Chrome, Edge या Safari आज़माइए।",
     "rc.voiceUsing": "आवाज़: {name}", "rc.voiceFallback": "इस डिवाइस पर पंजाबी आवाज़ नहीं है, इसलिए सवाल हिंदी में पढ़ा गया।",
     "rc.noVoice": "इस डिवाइस पर {lang} आवाज़ नहीं है। आप ख़ुद पढ़कर सुनाइए, और भी अपनापन लगेगा।",
-    "rc.listening": "सुन रहे हैं…", "rc.sample": "नमूना तिजोरी देखें",
+    "rc.listening": "सुन रहे हैं…", "rc.saving": "तिजोरी में सहेज रहे हैं…", "rc.sample": "नमूना तिजोरी देखें",
   },
   pa: {
     "rc.title": "ਰਿਕਾਰਡ", "rc.elder": "ਅਸੀਂ ਕਿਸ ਨਾਲ ਗੱਲ ਕਰ ਰਹੇ ਹਾਂ?", "rc.aloud": "ਸਵਾਲ ਪੜ੍ਹ ਕੇ ਸੁਣਾਓ", "rc.themes": "ਵਿਸ਼ੇ", "rc.all": "ਸਾਰੇ ਵਿਸ਼ੇ",
@@ -50,7 +50,7 @@ P.register({
     "rc.noRec": "ਇਹ ਬ੍ਰਾਊਜ਼ਰ ਆਡੀਓ ਰਿਕਾਰਡ ਨਹੀਂ ਕਰ ਸਕਦਾ। ਕਿਰਪਾ ਕਰਕੇ Chrome, Edge ਜਾਂ Safari ਵਰਤੋ।",
     "rc.voiceUsing": "ਆਵਾਜ਼: {name}", "rc.voiceFallback": "ਇਸ ਡਿਵਾਈਸ 'ਤੇ ਪੰਜਾਬੀ ਆਵਾਜ਼ ਨਹੀਂ ਹੈ, ਇਸ ਲਈ ਸਵਾਲ ਹਿੰਦੀ ਵਿੱਚ ਪੜ੍ਹਿਆ ਗਿਆ।",
     "rc.noVoice": "ਇਸ ਡਿਵਾਈਸ 'ਤੇ {lang} ਆਵਾਜ਼ ਨਹੀਂ ਹੈ। ਤੁਸੀਂ ਆਪ ਪੜ੍ਹ ਕੇ ਸੁਣਾਓ, ਹੋਰ ਵੀ ਅਪਣੱਤ ਲੱਗੇਗੀ।",
-    "rc.listening": "ਸੁਣ ਰਹੇ ਹਾਂ…", "rc.sample": "ਨਮੂਨਾ ਖ਼ਜ਼ਾਨਾ ਵੇਖੋ",
+    "rc.listening": "ਸੁਣ ਰਹੇ ਹਾਂ…", "rc.saving": "ਖ਼ਜ਼ਾਨੇ ਵਿੱਚ ਸੰਭਾਲ ਰਹੇ ਹਾਂ…", "rc.sample": "ਨਮੂਨਾ ਖ਼ਜ਼ਾਨਾ ਵੇਖੋ",
   },
   ta: {
     "rc.title": "பதிவு", "rc.elder": "நாம் யாருடன் பேசுகிறோம்?", "rc.aloud": "கேள்விகளை வாசித்துக் காட்டு", "rc.themes": "கருப்பொருள்கள்", "rc.all": "அனைத்தும்",
@@ -67,7 +67,7 @@ P.register({
     "rc.noRec": "இந்த உலாவியால் ஒலியைப் பதிவு செய்ய முடியாது. Chrome, Edge அல்லது Safari-ஐ முயலுங்கள்.",
     "rc.voiceUsing": "குரல்: {name}", "rc.voiceFallback": "இந்தச் சாதனத்தில் பஞ்சாபி குரல் இல்லை, அதனால் கேள்வி இந்தியில் வாசிக்கப்பட்டது.",
     "rc.noVoice": "இந்தச் சாதனத்தில் {lang} குரல் இல்லை. நீங்களே வாசித்துக் காட்டுங்கள், இன்னும் அன்பாக இருக்கும்.",
-    "rc.listening": "கேட்கிறோம்…", "rc.sample": "மாதிரிப் பெட்டகத்தைப் பாருங்கள்",
+    "rc.listening": "கேட்கிறோம்…", "rc.saving": "பெட்டகத்தில் சேமிக்கிறோம்…", "rc.sample": "மாதிரிப் பெட்டகத்தைப் பாருங்கள்",
   },
 });
 
@@ -288,12 +288,17 @@ P.boot(async () => {
   $("#retake").onclick = () => { player?.destroy(); blob = null; setState("idle"); };
   $("#save").onclick = async () => {
     if (!blob) return;
-    const cur = q();
-    await P.db.saveStory({
-      id: P.uid(), elderId: elder.id, questionId: cur.id, theme: cur.theme, lang: elder.lang,
-      audio: blob, mime: blob.type, duration: Math.round(elapsed / 1000), transcript: $("#rv-text").value.trim(),
-      translation: "", listens: 0, createdAt: Date.now(),
-    });
+    const cur = q(), btn = $("#save");
+    btn.disabled = true; $("#state").textContent = P.t("rc.saving");
+    try {
+      await P.db.saveStory({
+        id: P.uid(), elderId: elder.id, questionId: cur.id, theme: cur.theme, lang: elder.lang,
+        audio: blob, mime: blob.type, duration: Math.round(elapsed / 1000), transcript: $("#rv-text").value.trim(),
+        translation: "", listens: 0, createdAt: Date.now(),
+      });
+    } catch {
+      $("#state").textContent = P.t("rc.review"); P.toast(P.t("c.error")); return;
+    } finally { btn.disabled = false; }
     answered.add(cur.id);
     player?.destroy(); blob = null;
     const li = document.createElement("li");

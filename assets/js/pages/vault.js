@@ -10,7 +10,7 @@ P.register({
     "vt.confirm": "Delete this story forever? This can't be undone.", "vt.deleted": "Story deleted",
     "vt.noMatch": "Nothing matches “{q}” yet. Maybe it's a story still waiting to be asked.",
     "vt.emptyT": "{call}'s vault is waiting for its <em>first</em> story.", "vt.emptyP": "Ten minutes and one question is all it takes.",
-    "vt.record": "Record a story", "vt.sample": "Explore a sample vault", "vt.listens": "{n} listens", "vt.translation": "In English",
+    "vt.record": "Record a story", "vt.sample": "Explore a sample vault", "vt.listens": "{n} listens", "vt.translation": "In English", "vt.invite": "Invite family", "vt.copied": "Invite code copied. Share it with your family so they can join this vault.",
   },
   hi: {
     "vt.title": "तिजोरी", "vt.ask": "तिजोरी से पूछिए, जैसे शादी, साग, 1947…", "vt.list": "कहानियाँ", "vt.sky": "आसमान",
@@ -21,7 +21,7 @@ P.register({
     "vt.confirm": "क्या यह कहानी हमेशा के लिए हटानी है? यह वापस नहीं आएगी।", "vt.deleted": "कहानी हटा दी गई",
     "vt.noMatch": "“{q}” से अभी कुछ नहीं मिला। शायद यह कहानी अभी पूछी जानी बाक़ी है।",
     "vt.emptyT": "{call} की तिजोरी अपनी <em>पहली</em> कहानी का इंतज़ार कर रही है।", "vt.emptyP": "बस दस मिनट और एक सवाल चाहिए।",
-    "vt.record": "कहानी रिकॉर्ड करें", "vt.sample": "नमूना तिजोरी देखें", "vt.listens": "{n} बार सुनी गई", "vt.translation": "अंग्रेज़ी में",
+    "vt.record": "कहानी रिकॉर्ड करें", "vt.sample": "नमूना तिजोरी देखें", "vt.listens": "{n} बार सुनी गई", "vt.translation": "अंग्रेज़ी में", "vt.invite": "परिवार को जोड़ें", "vt.copied": "इनवाइट कोड कॉपी हो गया। इसे परिवार के साथ साझा कीजिए ताकि वो इस तिजोरी से जुड़ सकें।",
   },
   pa: {
     "vt.title": "ਖ਼ਜ਼ਾਨਾ", "vt.ask": "ਖ਼ਜ਼ਾਨੇ ਤੋਂ ਪੁੱਛੋ, ਜਿਵੇਂ ਵਿਆਹ, ਸਾਗ, 1947…", "vt.list": "ਕਹਾਣੀਆਂ", "vt.sky": "ਅਸਮਾਨ",
@@ -32,7 +32,7 @@ P.register({
     "vt.confirm": "ਕੀ ਇਹ ਕਹਾਣੀ ਹਮੇਸ਼ਾ ਲਈ ਹਟਾਉਣੀ ਹੈ? ਇਹ ਵਾਪਸ ਨਹੀਂ ਆਵੇਗੀ।", "vt.deleted": "ਕਹਾਣੀ ਹਟਾ ਦਿੱਤੀ ਗਈ",
     "vt.noMatch": "“{q}” ਨਾਲ ਹਾਲੇ ਕੁਝ ਨਹੀਂ ਮਿਲਿਆ। ਸ਼ਾਇਦ ਇਹ ਕਹਾਣੀ ਹਾਲੇ ਪੁੱਛੀ ਜਾਣੀ ਬਾਕੀ ਹੈ।",
     "vt.emptyT": "{call} ਦਾ ਖ਼ਜ਼ਾਨਾ ਆਪਣੀ <em>ਪਹਿਲੀ</em> ਕਹਾਣੀ ਦੀ ਉਡੀਕ ਕਰ ਰਿਹਾ ਹੈ।", "vt.emptyP": "ਬੱਸ ਦਸ ਮਿੰਟ ਅਤੇ ਇੱਕ ਸਵਾਲ ਚਾਹੀਦਾ ਹੈ।",
-    "vt.record": "ਕਹਾਣੀ ਰਿਕਾਰਡ ਕਰੋ", "vt.sample": "ਨਮੂਨਾ ਖ਼ਜ਼ਾਨਾ ਵੇਖੋ", "vt.listens": "{n} ਵਾਰ ਸੁਣੀ ਗਈ", "vt.translation": "ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ",
+    "vt.record": "ਕਹਾਣੀ ਰਿਕਾਰਡ ਕਰੋ", "vt.sample": "ਨਮੂਨਾ ਖ਼ਜ਼ਾਨਾ ਵੇਖੋ", "vt.listens": "{n} ਵਾਰ ਸੁਣੀ ਗਈ", "vt.translation": "ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ", "vt.invite": "ਪਰਿਵਾਰ ਨੂੰ ਜੋੜੋ", "vt.copied": "ਇਨਵਾਈਟ ਕੋਡ ਕਾਪੀ ਹੋ ਗਿਆ। ਇਸਨੂੰ ਪਰਿਵਾਰ ਨਾਲ ਸਾਂਝਾ ਕਰੋ ਤਾਂ ਜੋ ਉਹ ਇਸ ਖ਼ਜ਼ਾਨੇ ਨਾਲ ਜੁੜ ਸਕਣ।",
   },
   ta: {
     "vt.title": "பெட்டகம்", "vt.ask": "பெட்டகத்திடம் கேளுங்கள், உதா. கல்யாணம், சமையல், 1947…", "vt.list": "கதைகள்", "vt.sky": "வானம்",
@@ -43,7 +43,7 @@ P.register({
     "vt.confirm": "இந்தக் கதையை நிரந்தரமாக நீக்கவா? இதைத் திரும்பப் பெற முடியாது.", "vt.deleted": "கதை நீக்கப்பட்டது",
     "vt.noMatch": "“{q}” என்பதற்கு இன்னும் எதுவும் இல்லை. ஒருவேளை அந்தக் கதை இன்னும் கேட்கப்படவில்லை.",
     "vt.emptyT": "{call} அவர்களின் பெட்டகம் தன் <em>முதல்</em> கதைக்காகக் காத்திருக்கிறது.", "vt.emptyP": "பத்து நிமிடங்களும் ஒரு கேள்வியும் போதும்.",
-    "vt.record": "கதையைப் பதிவு செய்", "vt.sample": "மாதிரிப் பெட்டகத்தைப் பாருங்கள்", "vt.listens": "{n} முறை கேட்கப்பட்டது", "vt.translation": "ஆங்கிலத்தில்",
+    "vt.record": "கதையைப் பதிவு செய்", "vt.sample": "மாதிரிப் பெட்டகத்தைப் பாருங்கள்", "vt.listens": "{n} முறை கேட்கப்பட்டது", "vt.translation": "ஆங்கிலத்தில்", "vt.invite": "குடும்பத்தை அழையுங்கள்", "vt.copied": "அழைப்புக் குறியீடு நகலெடுக்கப்பட்டது. குடும்பத்தினர் இந்தப் பெட்டகத்தில் இணைய இதைப் பகிருங்கள்.",
   },
 });
 
@@ -65,6 +65,10 @@ P.boot(async () => {
     const all = P.db.elders();
     $("#elders").innerHTML = (all.length > 1 ? all.map(e => `<a href="#" data-id="${e.id}" aria-current="${e.id === elder.id}" title="${P.esc(e.name)}">${P.avatar(e)}</a>`).join("") : "")
       + `<a class="add" href="start.html?add" title="${P.strip(P.t("c.addElder"))}">${P.icon("plus")}</a>`;
+    $("#invite")?.addEventListener("click", async () => {
+      try { await navigator.clipboard.writeText(P.db.familyInfo().inviteCode); } catch {}
+      P.toast(P.t("vt.copied"));
+    });
     $$("#elders [data-id]").forEach(a => a.onclick = async e => { e.preventDefault(); P.db.setActive(a.dataset.id); elder = P.db.active(); await load(); });
     const mins = Math.round(stories.reduce((n, s) => n + (s.duration || 0), 0) / 60);
     const themes = new Set(stories.map(s => s.theme)).size;
@@ -73,6 +77,7 @@ P.boot(async () => {
     $("#profile").innerHTML = `<div class="profile">${P.avatar(elder, "xl")}<div>
         <h1>${P.esc(elder.name)}</h1>
         <div class="meta">${meta.map(m => `<span>${m}</span>`).join("")}</div>
+        ${P.db.cloud && P.db.familyInfo() ? `<button class="tag warm invite" id="invite" style="margin-top:16px;cursor:pointer">${P.icon("copy")} ${P.t("vt.invite")} · <b style="font-weight:700;letter-spacing:.08em">${P.esc(P.db.familyInfo().inviteCode)}</b></button>` : ""}
         <div class="stats"><div><b>${stories.length}</b><span>${P.t("vt.stories")}</span></div><div><b>${mins}</b><span>${P.t("vt.minutes")}</span></div><div><b>${themes}/6</b><span>${P.t("vt.themes")}</span></div></div>
       </div></div>`;
   }
@@ -124,15 +129,16 @@ P.boot(async () => {
     </article>`;
   }
   async function wire(el, s) {
-    const pk = s.audio ? await P.player.peaks(s.audio, 56) : P.player.fake(56, s.questionId.charCodeAt(1));
+    const blob = await P.db.audio(s);
+    const pk = blob ? await P.player.peaks(blob, 56) : P.player.fake(56, s.questionId.charCodeAt(1));
     players.push(P.player.mount({
-      wave: el.querySelector(".wave"), btn: el.querySelector(".play"), time: el.querySelector(".time"), blob: s.audio, duration: s.duration, peaks: pk,
+      wave: el.querySelector(".wave"), btn: el.querySelector(".play"), time: el.querySelector(".time"), blob, duration: s.duration, peaks: pk,
       onplay: () => { s.listens = (s.listens || 0) + 1; P.db.saveStory(s); },
     }));
     el.querySelector(".more")?.addEventListener("click", e => { el.classList.toggle("open"); e.target.textContent = P.t(el.classList.contains("open") ? "vt.less" : "vt.readAll"); });
     el.querySelector(".del").onclick = async () => {
       if (!confirm(P.t("vt.confirm"))) return;
-      await P.db.removeStory(s.id); P.toast(P.t("vt.deleted")); await load();
+      try { await P.db.removeStory(s.id, s); P.toast(P.t("vt.deleted")); await load(); } catch { P.toast(P.t("c.error")); }
     };
   }
 
@@ -223,9 +229,10 @@ P.boot(async () => {
       <div class="player"><button class="play"></button><div class="wave"></div><span class="faint small time"></span></div>
       ${s.transcript ? `<p class="text" lang="${s.lang}">${P.esc(s.transcript)}</p>` : ""}
       ${s.translation && P.lang !== s.lang ? `<p class="faint" style="margin-top:14px;font-style:italic">${P.esc(s.translation)}</p>` : ""}`;
+    const blob = await P.db.audio(s);
     sheetPlayer = P.player.mount({
-      wave: sheet.querySelector(".wave"), btn: sheet.querySelector(".play"), time: sheet.querySelector(".time"), blob: s.audio, duration: s.duration,
-      peaks: s.audio ? await P.player.peaks(s.audio, 64) : P.player.fake(64, s.questionId.charCodeAt(1)),
+      wave: sheet.querySelector(".wave"), btn: sheet.querySelector(".play"), time: sheet.querySelector(".time"), blob, duration: s.duration,
+      peaks: blob ? await P.player.peaks(blob, 64) : P.player.fake(64, s.questionId.charCodeAt(1)),
       onplay: () => { s.listens = (s.listens || 0) + 1; P.db.saveStory(s); },
     });
     sheet.showModal();

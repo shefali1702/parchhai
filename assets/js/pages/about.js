@@ -150,14 +150,14 @@ P.boot(() => {
     role = b.dataset.r; $$("#role button").forEach(x => x.setAttribute("aria-pressed", String(x === b))); paint();
   });
 
-  $("#vol-form").addEventListener("submit", e => {
+  $("#vol-form").addEventListener("submit", async e => {
     e.preventDefault();
     const email = $("#v-email").value.trim();
     if (!$("#v-name").value.trim() || !/^\S+@\S+\.\S+$/.test(email) || !$("#v-ok").checked) return P.toast(P.t("ab.err"));
-    P.db.saveVolunteer({
+    try { await P.db.saveVolunteer({
       role, name: $("#v-name").value.trim(), email, phone: $("#v-phone").value.trim(), city: $("#v-city").value.trim(),
       org: $("#v-org").value.trim(), languages: [...picked], when: role === "home" ? null : when, message: $("#v-msg").value.trim(),
-    });
+    }); } catch { return P.toast(P.t("c.error")); }
     $("#vol-form").hidden = true; $("#thanks").hidden = false; P.ding("bell");
   });
 
